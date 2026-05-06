@@ -50,32 +50,70 @@
 
   --border-color: rgba(255, 255, 255, 0.15);
   --border: 1px solid var(--border-color);
+
+  --interactive-text-default: #ffffff;
+  --interactive-text-hover: #ffffff;
+  --interactive-text-active: #ffffff;
+  --text-normal: #ffffff;
+  --header-primary: #ffffff;
+  --header-secondary: #ffffff;
 }
 
-/* ── Settings borders only ── */
-[class*="standardSidebarView_"],
-[class*="contentRegion_"] {
-  border-left: var(--border);
+/* ── Settings sidebar blur + border ── */
+[class*="sidebar_"][class*="settings"],
+[class*="side_"],
+[class*="sidebarRegionScroller_"],
+[class*="sidebarRegion_"],
+[class*="standardSidebarView_"] > [class*="sidebar"],
+[class*="layers_"] [class*="sidebar_"] {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
-[class*="side_"][class*="settings"],
-[class*="sidebar_"][class*="settings"] {
-  border-right: var(--border);
+/* ── Settings content region blur + border ── */
+[class*="contentRegion_"],
+[class*="contentColumn_"],
+[class*="standardSidebarView_"] > [class*="content"] {
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
+/* ── Settings dividers ── */
 [class*="settingsSection_"],
 [class*="divider_"] {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
+/* ── Channel name text white ── */
+[class*="name_"],
+[class*="channelName_"],
+[class*="linkTop_"],
+[class*="overflow_"],
+[class*="groupHeader_"],
+[class*="containerDefault_"],
+[class*="wrapper_"][class*="channel"] {
+  color: #ffffff !important;
+}
+
+/* ── Channel icons and hash white ── */
+[class*="icon_"],
+[class*="modeHash_"],
+svg[class*="icon_"] {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+}
+
+/* ── Theme variants ── */
 :is(.theme-light, .theme-dark .theme-light) {
   --background-shading: rgba(252, 252, 252, 0.3);
   --card-shading: rgba(252, 252, 252, 0.3);
   --popout-shading: rgba(252, 252, 252, 0.7);
   --modal-shading: rgba(252, 252, 252, 0.5);
   --input-shading: rgba(0, 0, 0, 0.3);
-  --normal-text: #36363c;
-  --muted-text: #75757e;
+  --normal-text: #ffffff;
+  --muted-text: #cccccc;
   --border-color: rgba(0, 0, 0, 0.15);
 }
 
@@ -85,8 +123,8 @@
   --popout-shading: rgba(0, 0, 0, 0.6);
   --modal-shading: rgba(0, 0, 0, 0.4);
   --input-shading: rgba(255, 255, 255, 0.05);
-  --normal-text: #d8d8db;
-  --muted-text: #aeaeb4;
+  --normal-text: #ffffff;
+  --muted-text: #cccccc;
 }
 
 :is(.theme-darker, .theme-light .theme-darker) {
@@ -95,8 +133,8 @@
   --popout-shading: rgba(0, 0, 0, 0.7);
   --modal-shading: rgba(0, 0, 0, 0.5);
   --input-shading: rgba(255, 255, 255, 0.05);
-  --normal-text: #fbfbfb;
-  --muted-text: #94949c;
+  --normal-text: #ffffff;
+  --muted-text: #cccccc;
 }
 
 :is(.theme-midnight, .theme-light .theme-midnight) {
@@ -105,6 +143,6 @@
   --popout-shading: rgba(0, 0, 0, 0.8);
   --modal-shading: rgba(0, 0, 0, 0.6);
   --input-shading: rgba(255, 255, 255, 0.05);
-  --normal-text: #dcdcde;
-  --muted-text: #86868e;
+  --normal-text: #ffffff;
+  --muted-text: #cccccc;
 }
