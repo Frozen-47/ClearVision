@@ -48,63 +48,11 @@
 
   --focus-color: var(--main-color);
 
-  /* Border variable — change this one value to recolor all borders */
   --border-color: rgba(255, 255, 255, 0.15);
   --border: 1px solid var(--border-color);
 }
 
-/* ── Channels sidebar ── */
-[class*="sidebar"] {
-  border-right: var(--border);
-}
-
-[class*="channel_"]:not([class*="channelIcon"]) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* ── Chat / messages area ── */
-[class*="chat_"],
-[class*="chatContent_"] {
-  border-left: var(--border);
-}
-
-[class*="message_"]:not([class*="messageListItem"]) {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-}
-
-/* ── Message input box ── */
-[class*="channelTextArea_"],
-[class*="textArea_"] {
-  border: var(--border) !important;
-  border-radius: 8px;
-}
-
-/* ── Cards, embeds, attachments ── */
-[class*="card_"],
-[class*="embed_"],
-[class*="attachment_"],
-[class*="messageAttachment"] {
-  border: var(--border) !important;
-  border-radius: 6px;
-}
-
-/* ── Popouts (user profiles, emoji picker, etc.) ── */
-[class*="popout_"],
-[class*="userPopout_"],
-[class*="layerContainer_"] > [class*="layer_"] {
-  border: var(--border) !important;
-  border-radius: 8px;
-}
-
-/* ── Modals ── */
-[class*="modal_"],
-[class*="modalContent_"],
-[class*="root_"][class*="modal"] {
-  border: var(--border) !important;
-  border-radius: 10px;
-}
-
-/* ── Settings ── */
+/* ── Settings borders only ── */
 [class*="standardSidebarView_"],
 [class*="contentRegion_"] {
   border-left: var(--border);
@@ -120,11 +68,6 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-/* ── Member list ── */
-[class*="membersWrap_"] {
-  border-left: var(--border);
-}
-
 :is(.theme-light, .theme-dark .theme-light) {
   --background-shading: rgba(252, 252, 252, 0.3);
   --card-shading: rgba(252, 252, 252, 0.3);
@@ -133,7 +76,6 @@
   --input-shading: rgba(0, 0, 0, 0.3);
   --normal-text: #36363c;
   --muted-text: #75757e;
-  /* Darker borders for light theme */
   --border-color: rgba(0, 0, 0, 0.15);
 }
 
