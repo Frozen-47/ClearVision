@@ -105,6 +105,26 @@ svg[class*="icon_"] {
   fill: #ffffff !important;
 }
 
+/* ── Dark blue link colours ── */
+a,
+[class*="anchor_"],
+[class*="anchorUnderlineOnHover_"],
+[class*="hyperlink_"],
+[class*="messageLink_"],
+[class*="link_"] {
+  color: #1a3a6b !important;
+}
+
+a:hover,
+[class*="anchor_"]:hover,
+[class*="anchorUnderlineOnHover_"]:hover,
+[class*="hyperlink_"]:hover,
+[class*="messageLink_"]:hover,
+[class*="link_"]:hover {
+  color: #0f2548 !important;
+  text-decoration: underline !important;
+}
+
 /* ── Theme variants ── */
 :is(.theme-light, .theme-dark .theme-light) {
   --background-shading: rgba(252, 252, 252, 0.3);
