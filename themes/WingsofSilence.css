@@ -1,5 +1,5 @@
-@import url("https://clearvision.github.io/ClearVision-v7/main.css");
-@import url("https://clearvision.github.io/ClearVision-v7/vencord.css");
+@import url("https://raw.githubusercontent.com/Frozen-47/Lunar/main/Flow/main.css");
+@import url("https://raw.githubusercontent.com/Frozen-47/Lunar/main/Flow/vencord.css");
 
 :root {
   --main-color: #272727;
@@ -14,7 +14,7 @@
   --offline-color: #555555;
 
   --background-shading-percent: 100%;
-  --background-image: url(https://raw.githubusercontent.com/Frozen-47/ClearVision/main/images/WingsofSilence.png);
+  --background-image: url(https://raw.githubusercontent.com/Frozen-47/Lunar/main/images/WingsofSilence.png);
   --background-position: center;
   --background-size: cover;
   --background-attachment: fixed;
