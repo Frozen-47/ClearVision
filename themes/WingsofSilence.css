@@ -2,8 +2,8 @@
 @import url("https://cdn.jsdelivr.net/gh/Frozen-47/Lunar@main/flow/vencord.css");
 
 :root {
-  --main-color: #272727;
-  --hover-color: #1a1a1a;
+  --main-color: #53565A;
+  --hover-color: #3a3d40;
   --success-color: #43b581;
   --danger-color: #bd0000;
 
@@ -59,7 +59,6 @@
   --header-secondary: #ffffff;
 }
 
-/* ── Settings sidebar blur + border ── */
 [class*="sidebar_"][class*="settings"],
 [class*="side_"],
 [class*="sidebarRegionScroller_"],
@@ -71,7 +70,7 @@
   border-right: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
-/* ── Settings content region blur + border ── */
+
 [class*="contentRegion_"],
 [class*="contentColumn_"],
 [class*="standardSidebarView_"] > [class*="content"] {
@@ -80,13 +79,12 @@
   border-left: 1px solid rgba(255, 255, 255, 0.15) !important;
 }
 
-/* ── Settings dividers ── */
 [class*="settingsSection_"],
 [class*="divider_"] {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-/* ── Channel name text white ── */
+
 [class*="name_"],
 [class*="channelName_"],
 [class*="linkTop_"],
@@ -97,7 +95,6 @@
   color: #ffffff !important;
 }
 
-/* ── Channel icons and hash white ── */
 [class*="icon_"],
 [class*="modeHash_"],
 svg[class*="icon_"] {
@@ -105,7 +102,6 @@ svg[class*="icon_"] {
   fill: #ffffff !important;
 }
 
-/* ── Dark blue link colours ── */
 a,
 [class*="anchor_"],
 [class*="anchorUnderlineOnHover_"],
@@ -125,7 +121,6 @@ a:hover,
   text-decoration: underline !important;
 }
 
-/* ── Theme variants ── */
 :is(.theme-light, .theme-dark .theme-light) {
   --background-shading: rgba(252, 252, 252, 0.3);
   --card-shading: rgba(252, 252, 252, 0.3);
