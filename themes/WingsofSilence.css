@@ -1,5 +1,5 @@
-@import url("https://cdn.jsdelivr.net/gh/Frozen-47/Lunar@main/flow/main.css");
-@import url("https://cdn.jsdelivr.net/gh/Frozen-47/Lunar@main/flow/vencord.css");
+@import url("https://cdn.jsdelivr.net/gh/Frozen-47/solunar@main/flow/main.css");
+@import url("https://cdn.jsdelivr.net/gh/Frozen-47/solunar@main/flow/vencord.css");
 
 :root {
   --main-color: #53565A;
@@ -14,7 +14,7 @@
   --offline-color: #555555;
 
   --background-shading-percent: 100%;
-  --background-image: url(https://raw.githubusercontent.com/Frozen-47/Lunar/main/images/WingsofSilence.png);
+  --background-image: url(https://raw.githubusercontent.com/Frozen-47/solunar/main/images/WingsofSilence.png);
   --background-position: center;
   --background-size: cover;
   --background-attachment: fixed;
