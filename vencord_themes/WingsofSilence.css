@@ -5,11 +5,11 @@
   --main-color: #53565A;
   --hover-color: #3a3d40;
   --success-color: #43b581;
-  --danger-color: #bd0000;
+  --danger-color: #ff0000;
 
   --online-color: #43b581;
-  --idle-color: #53565A;
-  --dnd-color: #bd0000;
+  --idle-color: #be9c3d;
+  --dnd-color: #ff0000;
   --streaming-color: #888888;
   --offline-color: #555555;
 
@@ -108,7 +108,7 @@ a,
 [class*="hyperlink_"],
 [class*="messageLink_"],
 [class*="link_"] {
-  color: #1a3a6b !important;
+  color: #ff4545 !important;
 }
 
 a:hover,
@@ -117,8 +117,9 @@ a:hover,
 [class*="hyperlink_"]:hover,
 [class*="messageLink_"]:hover,
 [class*="link_"]:hover {
-  color: #0f2548 !important;
-  text-decoration: underline !important;
+  color: #bd0000 !important;
+  text-decoration: none;
+  
 }
 
 :is(.theme-light, .theme-dark .theme-light) {
