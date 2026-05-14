@@ -1,0 +1,381 @@
+/* ============================================================
+   L — A Death Note Discord Theme
+   Inspired by the detective L from Death Note
+   Monochromatic darkness, gothic red accents, old-script soul
+   ============================================================ */
+
+@import url("https://cdn.jsdelivr.net/gh/Frozen-47/solunar@main/theme/main.css");
+@import url("https://cdn.jsdelivr.net/gh/Frozen-47/solunar@main/theme/vencord.css");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap");
+
+:root {
+  /* ── Core Palette ── */
+  --main-color: #c0392b;          /* Death Note red — L's nemesis */
+  --hover-color: #922b21;         /* Deeper crimson on hover */
+  --success-color: #a8b2b8;       /* Muted slate for success */
+  --danger-color: #e74c3c;        /* Bright danger red */
+
+  /* ── Presence Colors ── */
+  --online-color: #a8b2b8;
+  --idle-color: #7f8c8d;
+  --dnd-color: #c0392b;
+  --streaming-color: #5d6d7e;
+  --offline-color: #2c3e50;
+
+  /* ── Background ── */
+  --background-shading-percent: 100%;
+  --background-image: url(https://raw.githubusercontent.com/Frozen-47/solunar/main/images/L.png);
+  --background-position: center;
+  --background-size: cover;
+  --background-attachment: fixed;
+  --background-filter:
+    saturate(0)                        /* strip all color → pure B&W */
+    brightness(0.35)                   /* deep shadow, L's den at 3AM */
+    contrast(1.2);
+
+  /* ── User Popout / Modal inherit background ── */
+  --user-popout-image: var(--background-image);
+  --user-popout-position: var(--background-position);
+  --user-popout-size: var(--background-size);
+  --user-popout-attachment: var(--background-attachment);
+  --user-popout-filter: var(--background-filter);
+
+  --user-modal-image: var(--background-image);
+  --user-modal-position: var(--background-position);
+  --user-modal-size: var(--background-size);
+  --user-modal-attachment: var(--background-attachment);
+  --user-modal-filter: var(--background-filter);
+
+  /* ── Home Icon — the L glyph ── */
+  --home-icon: url("https://raw.githubusercontent.com/Frozen-47/solunar/main/images/WingsofSilence.png");
+  --home-size: cover;
+
+  /* ── Typography ── */
+  --main-font: "IM Fell English", "Georgia", "Times New Roman", serif;
+  --code-font: "Courier New", Courier, monospace;
+
+  /* ── Channel Colors ── */
+  --channel-normal: var(--interactive-text-default);
+  --channel-muted: var(--interactive-muted);
+  --channel-hover: var(--interactive-text-hover);
+  --channel-selected: var(--interactive-text-active);
+  --channel-selected-bg: rgba(192, 57, 43, 0.18);
+  --channel-unread: #c0392b;
+  --channel-unread-hover: #922b21;
+
+  /* ── Focus ── */
+  --focus-color: #c0392b;
+
+  /* ── Borders — near-invisible white hairlines ── */
+  --border-color: rgba(255, 255, 255, 0.07);
+  --border: 1px solid var(--border-color);
+
+  /* ── Text ── */
+  --interactive-text-default: #d5d8dc;
+  --interactive-text-hover: #f0f0f0;
+  --interactive-text-active: #ffffff;
+  --text-normal: #ccd1d1;
+  --header-primary: #f0f0f0;
+  --header-secondary: #aab7b8;
+}
+
+/* ────────────────────────────────────────────────
+   SIDEBAR — frosted glass on black
+   ──────────────────────────────────────────────── */
+[class*="sidebar_"][class*="settings"],
+[class*="side_"],
+[class*="sidebarRegionScroller_"],
+[class*="sidebarRegion_"],
+[class*="standardSidebarView_"] > [class*="sidebar"],
+[class*="layers_"] [class*="sidebar_"] {
+  background-color: rgba(5, 5, 5, 0.72) !important;
+  backdrop-filter: blur(14px) saturate(0.4) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(0.4) !important;
+  border-right: 1px solid rgba(192, 57, 43, 0.18) !important;
+}
+
+/* ────────────────────────────────────────────────
+   CONTENT REGION
+   ──────────────────────────────────────────────── */
+[class*="contentRegion_"],
+[class*="contentColumn_"],
+[class*="standardSidebarView_"] > [class*="content"] {
+  background-color: rgba(8, 8, 8, 0.60) !important;
+  backdrop-filter: blur(12px) saturate(0.3) !important;
+  -webkit-backdrop-filter: blur(12px) saturate(0.3) !important;
+  border-left: 1px solid rgba(192, 57, 43, 0.12) !important;
+}
+
+/* ────────────────────────────────────────────────
+   SETTINGS DIVIDERS
+   ──────────────────────────────────────────────── */
+[class*="settingsSection_"],
+[class*="divider_"] {
+  border-bottom: 1px solid rgba(192, 57, 43, 0.10) !important;
+}
+
+/* ────────────────────────────────────────────────
+   CHANNEL NAMES & NAVIGATION TEXT
+   ──────────────────────────────────────────────── */
+[class*="name_"],
+[class*="channelName_"],
+[class*="linkTop_"],
+[class*="overflow_"],
+[class*="groupHeader_"],
+[class*="containerDefault_"],
+[class*="wrapper_"][class*="channel"] {
+  color: #ccd1d1 !important;
+  letter-spacing: 0.02em;
+}
+
+/* ────────────────────────────────────────────────
+   ICONS
+   ──────────────────────────────────────────────── */
+[class*="icon_"],
+[class*="modeHash_"],
+svg[class*="icon_"] {
+  color: #aab7b8 !important;
+  fill: #aab7b8 !important;
+  transition: color 0.15s, fill 0.15s;
+}
+
+[class*="icon_"]:hover,
+svg[class*="icon_"]:hover {
+  color: #c0392b !important;
+  fill: #c0392b !important;
+}
+
+/* ────────────────────────────────────────────────
+   LINKS — blood red, L's crimson thread
+   ──────────────────────────────────────────────── */
+a,
+[class*="anchor_"],
+[class*="anchorUnderlineOnHover_"],
+[class*="hyperlink_"],
+[class*="messageLink_"],
+[class*="link_"] {
+  color: #c0392b !important;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover,
+[class*="anchor_"]:hover,
+[class*="anchorUnderlineOnHover_"]:hover,
+[class*="hyperlink_"]:hover,
+[class*="messageLink_"]:hover,
+[class*="link_"]:hover {
+  color: #e74c3c !important;
+  text-decoration: underline;
+}
+
+/* ────────────────────────────────────────────────
+   SELECTED / ACTIVE CHANNEL
+   ──────────────────────────────────────────────── */
+[class*="selected_"],
+[class*="modeSelected_"] {
+  background-color: rgba(192, 57, 43, 0.15) !important;
+  border-left: 2px solid #c0392b !important;
+}
+
+/* ────────────────────────────────────────────────
+   BUTTONS — minimal, ink-on-parchment
+   ──────────────────────────────────────────────── */
+[class*="button_"][class*="colorBrand_"],
+[class*="colorBrand_"] {
+  background-color: #c0392b !important;
+  color: #ffffff !important;
+  letter-spacing: 0.05em;
+  font-family: var(--main-font) !important;
+  transition: background-color 0.2s;
+}
+
+[class*="button_"][class*="colorBrand_"]:hover,
+[class*="colorBrand_"]:hover {
+  background-color: #922b21 !important;
+}
+
+/* ────────────────────────────────────────────────
+   MESSAGES — subtle hover highlight
+   ──────────────────────────────────────────────── */
+[class*="message_"]:hover {
+  background-color: rgba(192, 57, 43, 0.04) !important;
+}
+
+/* Mention highlight */
+[class*="mentioned_"],
+[class*="mention_"] {
+  background-color: rgba(192, 57, 43, 0.10) !important;
+  border-left: 2px solid #c0392b !important;
+}
+
+/* ────────────────────────────────────────────────
+   CHAT INPUT BOX
+   ──────────────────────────────────────────────── */
+[class*="channelTextArea_"] {
+  background-color: rgba(15, 15, 15, 0.75) !important;
+  border: 1px solid rgba(192, 57, 43, 0.20) !important;
+  border-radius: 8px !important;
+}
+
+[class*="channelTextArea_"]:focus-within {
+  border-color: rgba(192, 57, 43, 0.50) !important;
+  box-shadow: 0 0 0 2px rgba(192, 57, 43, 0.10) !important;
+}
+
+/* ────────────────────────────────────────────────
+   SCROLLBAR — thin, crimson
+   ──────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(192, 57, 43, 0.35);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(192, 57, 43, 0.65);
+}
+
+/* ────────────────────────────────────────────────
+   MODALS — dark pane with red-tinged border
+   ──────────────────────────────────────────────── */
+[class*="modal_"] {
+  background-color: rgba(10, 10, 10, 0.92) !important;
+  backdrop-filter: blur(20px) saturate(0.5) !important;
+  -webkit-backdrop-filter: blur(20px) saturate(0.5) !important;
+  border: 1px solid rgba(192, 57, 43, 0.22) !important;
+}
+
+[class*="header_"][class*="modal_"],
+[class*="modalHeader_"] {
+  border-bottom: 1px solid rgba(192, 57, 43, 0.15) !important;
+}
+
+[class*="footer_"][class*="modal_"],
+[class*="modalFooter_"] {
+  border-top: 1px solid rgba(192, 57, 43, 0.15) !important;
+  background-color: rgba(5, 5, 5, 0.6) !important;
+}
+
+/* ────────────────────────────────────────────────
+   TOOLTIPS
+   ──────────────────────────────────────────────── */
+[class*="tooltip_"] {
+  background-color: rgba(12, 12, 12, 0.95) !important;
+  border: 1px solid rgba(192, 57, 43, 0.30) !important;
+  color: #ccd1d1 !important;
+  font-family: var(--main-font) !important;
+  font-size: 12px !important;
+  letter-spacing: 0.03em;
+}
+
+/* ────────────────────────────────────────────────
+   USER POPOUT CARD
+   ──────────────────────────────────────────────── */
+[class*="userPopout_"],
+[class*="userProfile_"] {
+  background-color: rgba(10, 10, 10, 0.92) !important;
+  border: 1px solid rgba(192, 57, 43, 0.25) !important;
+}
+
+[class*="userPopout_"] [class*="username_"],
+[class*="userProfile_"] [class*="username_"] {
+  color: #f0f0f0 !important;
+  font-family: var(--main-font) !important;
+}
+
+/* ────────────────────────────────────────────────
+   REACTIONS
+   ──────────────────────────────────────────────── */
+[class*="reactionCount_"] {
+  color: #aab7b8 !important;
+}
+
+[class*="reaction_"]:hover {
+  background-color: rgba(192, 57, 43, 0.15) !important;
+}
+
+[class*="reaction_"][class*="reactionMe_"] {
+  background-color: rgba(192, 57, 43, 0.20) !important;
+  border-color: rgba(192, 57, 43, 0.50) !important;
+}
+
+/* ────────────────────────────────────────────────
+   UNREAD BADGE & MENTION PILL
+   ──────────────────────────────────────────────── */
+[class*="numberBadge_"],
+[class*="unreadMentionsIndicatorBottom_"],
+[class*="unreadMentionsIndicatorTop_"] {
+  background-color: #c0392b !important;
+  color: #ffffff !important;
+}
+
+/* ────────────────────────────────────────────────
+   SERVER ICON SELECTED PILL
+   ──────────────────────────────────────────────── */
+[class*="pill_"] [class*="item_"] {
+  background-color: #c0392b !important;
+}
+
+/* ────────────────────────────────────────────────
+   SEARCH BAR
+   ──────────────────────────────────────────────── */
+[class*="searchBar_"] {
+  background-color: rgba(10, 10, 10, 0.70) !important;
+  border: 1px solid rgba(192, 57, 43, 0.18) !important;
+}
+
+[class*="searchBar_"]:focus-within {
+  border-color: rgba(192, 57, 43, 0.45) !important;
+}
+
+/* ────────────────────────────────────────────────
+   THEME SHADING VARIANTS
+   ──────────────────────────────────────────────── */
+:is(.theme-light, .theme-dark .theme-light) {
+  --background-shading: rgba(240, 240, 240, 0.18);
+  --card-shading: rgba(240, 240, 240, 0.15);
+  --popout-shading: rgba(240, 240, 240, 0.55);
+  --modal-shading: rgba(240, 240, 240, 0.40);
+  --input-shading: rgba(0, 0, 0, 0.20);
+  --normal-text: #1a1a1a;
+  --muted-text: #555555;
+  --border-color: rgba(0, 0, 0, 0.10);
+}
+
+:is(.theme-dark, .theme-light .theme-dark) {
+  --background-shading: rgba(0, 0, 0, 0.55);
+  --card-shading: rgba(0, 0, 0, 0.30);
+  --popout-shading: rgba(0, 0, 0, 0.72);
+  --modal-shading: rgba(0, 0, 0, 0.55);
+  --input-shading: rgba(255, 255, 255, 0.04);
+  --normal-text: #ccd1d1;
+  --muted-text: #7f8c8d;
+}
+
+:is(.theme-darker, .theme-light .theme-darker) {
+  --background-shading: rgba(0, 0, 0, 0.72);
+  --card-shading: rgba(0, 0, 0, 0.40);
+  --popout-shading: rgba(0, 0, 0, 0.80);
+  --modal-shading: rgba(0, 0, 0, 0.65);
+  --input-shading: rgba(255, 255, 255, 0.04);
+  --normal-text: #d5d8dc;
+  --muted-text: #6c7a7d;
+}
+
+:is(.theme-midnight, .theme-light .theme-midnight) {
+  --background-shading: rgba(0, 0, 0, 0.88);
+  --card-shading: rgba(0, 0, 0, 0.55);
+  --popout-shading: rgba(0, 0, 0, 0.92);
+  --modal-shading: rgba(0, 0, 0, 0.75);
+  --input-shading: rgba(255, 255, 255, 0.03);
+  --normal-text: #d5d8dc;
+  --muted-text: #566573;
+}
